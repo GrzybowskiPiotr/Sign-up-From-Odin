@@ -1,0 +1,213 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+@font-face {
+  font-family: "Norse";
+  src: url("./public/fonts/Norse.otf"), local("Regular");
+}
+html {
+  font-size: 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+main {
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  background-color: whitesmoke;
+}
+.mainContent {
+  flex-grow: 1;
+}
+.aside {
+  width: 30%;
+  background-image: url("./public/images/kristaps-ungurs-rur3x2caDVY-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.odinLogo {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 0.5rem;
+  color: azure;
+  font-family: "Norse";
+  text-align: center;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+}
+.odinLogo img {
+  height: 4rem;
+  margin: 0 0.25rem;
+}
+.odinLogo h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+form {
+  width: 70%;
+}
+.formHeading {
+  padding: 2rem;
+  margin-top: 4rem;
+
+  font-weight: bolder;
+  width: 80%;
+}
+.formHeading p {
+  margin-bottom: 1rem;
+}
+.formContainer {
+  background-color: white;
+
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+.formContainer form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.inputsContaner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  column-gap: 5rem;
+  padding-top: 1.5rem;
+}
+.formContainer label {
+  display: block;
+  text-transform: uppercase;
+  color: darkgray;
+  font-weight: bolder;
+  letter-spacing: 0.125rem;
+  font-size: 0.8rem;
+}
+.formContainer input {
+  border: 1px solid rgba(169, 169, 169, 0.5);
+  border-radius: 5px;
+  padding: 0.125rem 0.75rem;
+}
+.formContainer input:focus {
+  outline: 1px solid darkblue;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 255 / 0.2);
+}
+.formContainer input:user-invalid {
+  outline: 1px solid darkred;
+  box-shadow: 2px 2px 2px 1px rgba(255, 0, 34, 0.2);
+}
+.formContainer button {
+  position: absolute;
+  bottom: -6rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  padding: 0.5rem 3rem;
+  border: none;
+  background-color: rgb(43, 88, 43);
+  color: azure;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  box-shadow: 2px 2px 2px 1px rgba(43, 88, 43, 0.1);
+  cursor: pointer;
+}
+.login {
+  margin-top: 5rem;
+  margin-left: 2rem;
+  font-weight: 500;
+  color: rgb(95, 100, 88);
+}
+.login a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(43, 88, 43);
+}
